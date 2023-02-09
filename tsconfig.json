@@ -31,6 +31,6 @@
     ]
   }]
   },
-  "include": ["src"],"files":["src/styles/styles.d.ts"],
+  //"include": ["src"],"files":["src/styles/styles.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
