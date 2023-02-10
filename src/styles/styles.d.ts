@@ -1,15 +1,16 @@
 import 'styled-components';
 declare module 'styled-components' {
-	export interface defaultTheme {
+	export interface DefaultTheme {
 		
-		title: 'string',
+		title: string,
 
 		colors: {
-		primary: 'string',
-		secundary: 'string',
+		primary: string,
+		secundary: string,
 		
-		background: 'string',
-		text: 'string',
+		header: string,
+		background: string,
+		text: string,
 	},
 	}
 

@@ -19,8 +19,9 @@
 	"paths": {
 		"@components/*":["src/components/*"],
 		"@pages/*":["src/pages/*"],
-		"@images/*":["src/images/*"],
-		"@api/*":["src/api"]
+		"@styles/*":["src/styles/*"],
+		"@hooks/*":["src/hooks/*"],
+		"@utils/*":["src/utils/*"]
 	},
   "plugins": [{
     "name": "typescript-styled-plugin",
