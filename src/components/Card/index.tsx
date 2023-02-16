@@ -5,6 +5,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";  
 import { Card as CardPrime } from 'primereact/card';
 import { Rating } from 'primereact/rating';
+import { Container } from './styles';
 
 export interface IPropsRoot{
     titleMovie?: string
@@ -15,15 +16,18 @@ export interface IPropsRoot{
 
 const Root: React.FC<IPropsRoot> = ({children,titleMovie, header, haveStars}) => {
     return(
-        <CardPrime title={titleMovie ?? 'title'} header={header}>          
-            { haveStars ?
-                <Rating value={haveStars} readOnly cancel={false} />
-                        :
-                <>
-                </>
+        <Container>
+        <CardPrime header={header}>     
+        <p style={{minWidth: "0",maxWidth: "10.5rem", fontSize: "1.6rem", whiteSpace: "nowrap", overflow: "hidden",textOverflow: "ellipsis"}}>{titleMovie}</p>     
+            { haveStars 
+            ?
+            <Rating value={haveStars} readOnly cancel={false} />
+            :
+            <>
+            </>
             }
-            
         </CardPrime>
+    </Container>
     );
 }
 Root.displayName = `Card.Root`
@@ -35,7 +39,7 @@ export interface IPropsImage{
 const Image: React.FC<IPropsImage> = ({imgMovie}) => {
     return(
         <>
-            <img style={{width: '30rem'}} src={imgMovie ?? `https://docs.google.com/uc?id=1I3kIAWfqOamABw3xyWOtK_jHpG6Do-Wn`} alt="" />
+            <img style={{width: '13rem', margin: "auto auto" }} src={imgMovie ?? `https://m.media-amazon.com/images/M/MV5BZDc4MzVkNzYtZTRiZC00ODYwLWJjZmMtMDIyNjQ1M2M1OGM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_FMjpg_UX1000_.jpg`} alt="" />
         </>
     );
 }
